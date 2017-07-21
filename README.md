@@ -30,8 +30,8 @@ A simple PHP package for sending messages to [Slack](https://slack.com) with
 	- [Explicit message creation](#explicit-message-creation)
 	- [Attachments](#attachments)
 - [Contributing](#contributing)
-- [License](#license)
 - [Credits](#credits)
+- [License](#license)
 
 ### Requirements
 
