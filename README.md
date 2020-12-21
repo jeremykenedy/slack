@@ -36,7 +36,7 @@ A simple PHP package for sending messages to [Slack](https://slack.com) with
 
 ### Requirements
 
-* PHP 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, or HHVM
+* PHP 7.3, 7.4+
 
 ### Installation
 
