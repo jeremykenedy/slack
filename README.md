@@ -2,6 +2,7 @@
 
 [![Total Downloads](https://poser.pugx.org/jeremykenedy/slack/d/total.svg)](https://packagist.org/packages/jeremykenedy/slack)
 [![Latest Stable Version](https://poser.pugx.org/jeremykenedy/slack/v/stable.svg)](https://packagist.org/packages/jeremykenedy/slack)
+[![Build Status](https://travis-ci.com/jeremykenedy/slack.svg?branch=master)](https://travis-ci.com/jeremykenedy/slack)
 [![StyleCI](https://github.styleci.io/repos/97971152/shield?branch=master)](https://github.styleci.io/repos/97971152?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
