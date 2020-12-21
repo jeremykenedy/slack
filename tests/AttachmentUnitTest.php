@@ -11,14 +11,14 @@ class AttachmentUnitTest extends PHPUnit_Framework_TestCase
         $now = new DateTime;
 
         $a = new Attachment([
-            'fallback' => 'Fallback',
-            'text' => 'Text',
-            'pretext' => 'Pretext',
-            'color' => 'bad',
-            'footer' => 'Footer',
+            'fallback'    => 'Fallback',
+            'text'        => 'Text',
+            'pretext'     => 'Pretext',
+            'color'       => 'bad',
+            'footer'      => 'Footer',
             'footer_icon' => 'https://platform.slack-edge.com/img/default_application_icon.png',
-            'timestamp' => $now,
-            'mrkdwn_in' => ['pretext', 'text', 'fields'],
+            'timestamp'   => $now,
+            'mrkdwn_in'   => ['pretext', 'text', 'fields'],
         ]);
 
         $this->assertEquals('Fallback', $a->getFallback());
@@ -44,18 +44,18 @@ class AttachmentUnitTest extends PHPUnit_Framework_TestCase
     {
         $a = new Attachment([
             'fallback' => 'Fallback',
-            'text' => 'Text',
-            'fields' => [
-              [
-                'title' => 'Title 1',
-                'value' => 'Value 1',
-                'short' => false,
-              ],
-              [
-                'title' => 'Title 2',
-                'value' => 'Value 1',
-                'short' => false,
-              ],
+            'text'     => 'Text',
+            'fields'   => [
+                [
+                    'title' => 'Title 1',
+                    'value' => 'Value 1',
+                    'short' => false,
+                ],
+                [
+                    'title' => 'Title 2',
+                    'value' => 'Value 1',
+                    'short' => false,
+                ],
             ],
         ]);
 
@@ -71,57 +71,57 @@ class AttachmentUnitTest extends PHPUnit_Framework_TestCase
         $now = new DateTime;
 
         $in = [
-            'fallback' => 'Fallback',
-            'text' => 'Text',
-            'pretext' => 'Pretext',
-            'color' => 'bad',
-            'footer' => 'Footer',
+            'fallback'    => 'Fallback',
+            'text'        => 'Text',
+            'pretext'     => 'Pretext',
+            'color'       => 'bad',
+            'footer'      => 'Footer',
             'footer_icon' => 'https://platform.slack-edge.com/img/default_application_icon.png',
-            'timestamp' => $now,
-            'mrkdwn_in' => ['pretext', 'text'],
-            'image_url' => 'http://fake.host/image.png',
-            'thumb_url' => 'http://fake.host/image.png',
-            'title' => 'A title',
-            'title_link' => 'http://fake.host/',
+            'timestamp'   => $now,
+            'mrkdwn_in'   => ['pretext', 'text'],
+            'image_url'   => 'http://fake.host/image.png',
+            'thumb_url'   => 'http://fake.host/image.png',
+            'title'       => 'A title',
+            'title_link'  => 'http://fake.host/',
             'author_name' => 'Bender Bending Rodriguez',
             'author_link' => 'http://fake.host/',
             'author_icon' => 'http://fake.host/image.png',
-            'fields' => [
-              [
-                'title' => 'Title 1',
-                'value' => 'Value 1',
-                'short' => false,
-              ],
-              [
-                'title' => 'Title 2',
-                'value' => 'Value 1',
-                'short' => false,
-              ],
+            'fields'      => [
+                [
+                    'title' => 'Title 1',
+                    'value' => 'Value 1',
+                    'short' => false,
+                ],
+                [
+                    'title' => 'Title 2',
+                    'value' => 'Value 1',
+                    'short' => false,
+                ],
             ],
             'actions' => [
                 [
-                    'name' => 'Name 1',
-                    'text' => 'Text 1',
-                    'style' => 'default',
-                    'type' => 'button',
-                    'value' => 'Value 1',
+                    'name'    => 'Name 1',
+                    'text'    => 'Text 1',
+                    'style'   => 'default',
+                    'type'    => 'button',
+                    'value'   => 'Value 1',
                     'confirm' => [
-                        'title' => 'Title 1',
-                        'text' => 'Text 1',
-                        'ok_text' => 'OK Text 1',
+                        'title'        => 'Title 1',
+                        'text'         => 'Text 1',
+                        'ok_text'      => 'OK Text 1',
                         'dismiss_text' => 'Dismiss Text 1',
                     ],
                 ],
                 [
-                    'name' => 'Name 2',
-                    'text' => 'Text 2',
-                    'style' => 'default',
-                    'type' => 'button',
-                    'value' => 'Value 2',
+                    'name'    => 'Name 2',
+                    'text'    => 'Text 2',
+                    'style'   => 'default',
+                    'type'    => 'button',
+                    'value'   => 'Value 2',
                     'confirm' => [
-                        'title' => 'Title 2',
-                        'text' => 'Text 2',
-                        'ok_text' => 'OK Text 2',
+                        'title'        => 'Title 2',
+                        'text'         => 'Text 2',
+                        'ok_text'      => 'OK Text 2',
                         'dismiss_text' => 'Dismiss Text 2',
                     ],
                 ],
@@ -130,57 +130,57 @@ class AttachmentUnitTest extends PHPUnit_Framework_TestCase
 
         // Sublte difference with timestamp
         $out = [
-            'fallback' => 'Fallback',
-            'text' => 'Text',
-            'pretext' => 'Pretext',
-            'color' => 'bad',
-            'footer' => 'Footer',
+            'fallback'    => 'Fallback',
+            'text'        => 'Text',
+            'pretext'     => 'Pretext',
+            'color'       => 'bad',
+            'footer'      => 'Footer',
             'footer_icon' => 'https://platform.slack-edge.com/img/default_application_icon.png',
-            'ts' => $now->getTimestamp(),
-            'mrkdwn_in' => ['pretext', 'text'],
-            'image_url' => 'http://fake.host/image.png',
-            'thumb_url' => 'http://fake.host/image.png',
-            'title' => 'A title',
-            'title_link' => 'http://fake.host/',
+            'ts'          => $now->getTimestamp(),
+            'mrkdwn_in'   => ['pretext', 'text'],
+            'image_url'   => 'http://fake.host/image.png',
+            'thumb_url'   => 'http://fake.host/image.png',
+            'title'       => 'A title',
+            'title_link'  => 'http://fake.host/',
             'author_name' => 'Bender Bending Rodriguez',
             'author_link' => 'http://fake.host/',
             'author_icon' => 'http://fake.host/image.png',
-            'fields' => [
-              [
-                'title' => 'Title 1',
-                'value' => 'Value 1',
-                'short' => false,
-              ],
-              [
-                'title' => 'Title 2',
-                'value' => 'Value 1',
-                'short' => false,
-              ],
+            'fields'      => [
+                [
+                    'title' => 'Title 1',
+                    'value' => 'Value 1',
+                    'short' => false,
+                ],
+                [
+                    'title' => 'Title 2',
+                    'value' => 'Value 1',
+                    'short' => false,
+                ],
             ],
             'actions' => [
                 [
-                    'name' => 'Name 1',
-                    'text' => 'Text 1',
-                    'style' => 'default',
-                    'type' => 'button',
-                    'value' => 'Value 1',
+                    'name'    => 'Name 1',
+                    'text'    => 'Text 1',
+                    'style'   => 'default',
+                    'type'    => 'button',
+                    'value'   => 'Value 1',
                     'confirm' => [
-                        'title' => 'Title 1',
-                        'text' => 'Text 1',
-                        'ok_text' => 'OK Text 1',
+                        'title'        => 'Title 1',
+                        'text'         => 'Text 1',
+                        'ok_text'      => 'OK Text 1',
                         'dismiss_text' => 'Dismiss Text 1',
                     ],
                 ],
                 [
-                    'name' => 'Name 2',
-                    'text' => 'Text 2',
-                    'style' => 'default',
-                    'type' => 'button',
-                    'value' => 'Value 2',
+                    'name'    => 'Name 2',
+                    'text'    => 'Text 2',
+                    'style'   => 'default',
+                    'type'    => 'button',
+                    'value'   => 'Value 2',
                     'confirm' => [
-                        'title' => 'Title 2',
-                        'text' => 'Text 2',
-                        'ok_text' => 'OK Text 2',
+                        'title'        => 'Title 2',
+                        'text'         => 'Text 2',
+                        'ok_text'      => 'OK Text 2',
                         'dismiss_text' => 'Dismiss Text 2',
                     ],
                 ],
@@ -196,19 +196,19 @@ class AttachmentUnitTest extends PHPUnit_Framework_TestCase
     {
         $a = new Attachment([
             'fallback' => 'Fallback',
-            'text' => 'Text',
+            'text'     => 'Text',
         ]);
 
         $a->addAction([
-            'name' => 'Name 1',
-            'text' => 'Text 1',
-            'style' => 'default',
-            'type' => 'button',
-            'value' => 'Value 1',
+            'name'    => 'Name 1',
+            'text'    => 'Text 1',
+            'style'   => 'default',
+            'type'    => 'button',
+            'value'   => 'Value 1',
             'confirm' => [
-                'title' => 'Title 1',
-                'text' => 'Text 1',
-                'ok_text' => 'OK Text 1',
+                'title'        => 'Title 1',
+                'text'         => 'Text 1',
+                'ok_text'      => 'OK Text 1',
                 'dismiss_text' => 'Dismiss Text 1',
             ],
         ]);
@@ -224,19 +224,19 @@ class AttachmentUnitTest extends PHPUnit_Framework_TestCase
     {
         $a = new Attachment([
             'fallback' => 'Fallback',
-            'text' => 'Text',
+            'text'     => 'Text',
         ]);
 
         $ac = new AttachmentAction([
-            'name' => 'Name 1',
-            'text' => 'Text 1',
-            'style' => 'default',
-            'type' => 'button',
-            'value' => 'Value 1',
+            'name'    => 'Name 1',
+            'text'    => 'Text 1',
+            'style'   => 'default',
+            'type'    => 'button',
+            'value'   => 'Value 1',
             'confirm' => [
-                'title' => 'Title 1',
-                'text' => 'Text 1',
-                'ok_text' => 'OK Text 1',
+                'title'        => 'Title 1',
+                'text'         => 'Text 1',
+                'ok_text'      => 'OK Text 1',
                 'dismiss_text' => 'Dismiss Text 1',
             ],
         ]);
@@ -254,7 +254,7 @@ class AttachmentUnitTest extends PHPUnit_Framework_TestCase
     {
         $a = new Attachment([
             'fallback' => 'Fallback',
-            'text' => 'Text',
+            'text'     => 'Text',
         ]);
 
         $a->addField([
@@ -273,14 +273,14 @@ class AttachmentUnitTest extends PHPUnit_Framework_TestCase
     public function testAddFieldAsObject()
     {
         $a = new Attachment([
-          'fallback' => 'Fallback',
-          'text' => 'Text',
+            'fallback' => 'Fallback',
+            'text'     => 'Text',
         ]);
 
         $f = new AttachmentField([
-          'title' => 'Title 1',
-          'value' => 'Value 1',
-          'short' => true,
+            'title' => 'Title 1',
+            'value' => 'Value 1',
+            'short' => true,
         ]);
 
         $a->addField($f);
@@ -295,18 +295,18 @@ class AttachmentUnitTest extends PHPUnit_Framework_TestCase
     public function testSetFields()
     {
         $a = new Attachment([
-          'fallback' => 'Fallback',
-          'text' => 'Text',
+            'fallback' => 'Fallback',
+            'text'     => 'Text',
         ]);
 
         $a->addField([
-          'title' => 'Title 1',
-          'value' => 'Value 1',
-          'short' => true,
+            'title' => 'Title 1',
+            'value' => 'Value 1',
+            'short' => true,
         ])->addField([
-          'title' => 'Title 2',
-          'value' => 'Value 2',
-          'short' => true,
+            'title' => 'Title 2',
+            'value' => 'Value 2',
+            'short' => true,
         ]);
 
         $this->assertSame(2, count($a->getFields()));
