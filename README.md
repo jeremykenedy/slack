@@ -2,7 +2,7 @@
 
 [![Total Downloads](https://poser.pugx.org/jeremykenedy/slack/d/total.svg)](https://packagist.org/packages/jeremykenedy/slack)
 [![Latest Stable Version](https://poser.pugx.org/jeremykenedy/slack/v/stable.svg)](https://packagist.org/packages/jeremykenedy/slack)
-[![StyleCI](https://github.styleci.io/repos/97971152/shield?branch=master)]
+[![StyleCI](https://github.styleci.io/repos/97971152/shield?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A simple PHP package for sending messages to [Slack](https://slack.com) with
