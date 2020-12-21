@@ -6,10 +6,10 @@ use InvalidArgumentException;
 
 class AttachmentAction
 {
-    const TYPE_BUTTON   = 'button';
+    const TYPE_BUTTON = 'button';
     const STYLE_DEFAULT = 'default';
     const STYLE_PRIMARY = 'primary';
-    const STYLE_DANGER  = 'danger';
+    const STYLE_DANGER = 'danger';
 
     /**
      * The required name field of the action. The name will be returned to your Action URL.
@@ -216,11 +216,11 @@ class AttachmentAction
     public function toArray()
     {
         return [
-            'name' => $this->getName(),
-            'text' => $this->getText(),
-            'style' => $this->getStyle(),
-            'type' => $this->getType(),
-            'value' => $this->getValue(),
+            'name'    => $this->getName(),
+            'text'    => $this->getText(),
+            'style'   => $this->getStyle(),
+            'type'    => $this->getType(),
+            'value'   => $this->getValue(),
             'confirm' => $this->getConfirm()->toArray(),
         ];
     }

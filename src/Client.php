@@ -384,13 +384,13 @@ class Client
     public function preparePayload(Message $message)
     {
         $payload = [
-            'text' => $message->getText(),
-            'channel' => $message->getChannel(),
-            'username' => $message->getUsername(),
-            'link_names' => $this->getLinkNames() ? 1 : 0,
+            'text'         => $message->getText(),
+            'channel'      => $message->getChannel(),
+            'username'     => $message->getUsername(),
+            'link_names'   => $this->getLinkNames() ? 1 : 0,
             'unfurl_links' => $this->getUnfurlLinks(),
             'unfurl_media' => $this->getUnfurlMedia(),
-            'mrkdwn' => $message->getAllowMarkdown(),
+            'mrkdwn'       => $message->getAllowMarkdown(),
         ];
 
         if ($icon = $message->getIcon()) {

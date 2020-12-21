@@ -1,7 +1,7 @@
 <?php
 
-use jeremykenedy\Slack\Message;
 use jeremykenedy\Slack\Attachment;
+use jeremykenedy\Slack\Message;
 
 class MessageUnitTest extends PHPUnit_Framework_TestCase
 {
@@ -61,10 +61,10 @@ class MessageUnitTest extends PHPUnit_Framework_TestCase
 
         $attachmentArray = [
             'fallback' => 'Fallback text for IRC',
-            'text' => 'Attachment text',
-            'pretext' => 'Attachment pretext',
-            'color' => 'bad',
-            'fields' => [],
+            'text'     => 'Attachment text',
+            'pretext'  => 'Attachment pretext',
+            'color'    => 'bad',
+            'fields'   => [],
         ];
 
         $message->attach($attachmentArray);
@@ -90,7 +90,7 @@ class MessageUnitTest extends PHPUnit_Framework_TestCase
 
         $obj = new Attachment([
             'fallback' => 'Fallback text for IRC',
-            'text' => 'Text',
+            'text'     => 'Text',
         ]);
 
         $message->attach($obj);
@@ -110,12 +110,12 @@ class MessageUnitTest extends PHPUnit_Framework_TestCase
 
         $obj1 = new Attachment([
             'fallback' => 'Fallback text for IRC',
-            'text' => 'Text',
+            'text'     => 'Text',
         ]);
 
         $obj2 = new Attachment([
             'fallback' => 'Fallback text for IRC',
-            'text' => 'Text',
+            'text'     => 'Text',
         ]);
 
         $message->attach($obj1)->attach($obj2);
@@ -139,12 +139,12 @@ class MessageUnitTest extends PHPUnit_Framework_TestCase
 
         $obj1 = new Attachment([
             'fallback' => 'Fallback text for IRC',
-            'text' => 'Text',
+            'text'     => 'Text',
         ]);
 
         $obj2 = new Attachment([
             'fallback' => 'Fallback text for IRC',
-            'text' => 'Text',
+            'text'     => 'Text',
         ]);
 
         $message->attach($obj1)->attach($obj2);
